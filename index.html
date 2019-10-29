@@ -33,7 +33,34 @@
 				<div class="text__down">scroll down</div>
 			</div>
 		</div>
-		<div class="animatemenu"></div>
+		<div class="animatemenu">
+			<div class="container">
+				<div class="row">
+					<div class="contentforemenu">
+						<div class="col col-left col-lg-6">
+						 <div class="menu_text_about">
+							 <h4>My way to success</h4>
+								 <p>	I graduated from the Faculty of Contemporary Literature and had a master's degree in contemporary image at the Fondazione Fotografia of Modena.</p>
+								 <p>I started taking pictures when I was a child, and I mainly worked on portraits and body language.</P>
+								 <p>I held exhibitions all over Italy and Europe, and in addition to art projects, I worked in the fashion industry with editorials, advertising campaigns and music videos.</p>
+							 <div class="menus">
+								 <a href="#">about me</a>
+								 <a href="#">specialization</a>
+								 <a href="#">works</a>
+								 <a href="#">reviews</a>
+							 	<a href="#">contact me</a>
+							 </div>
+						 </div>
+						</div>
+						<div class="col col-right col-lg-6">
+							 <div class="imgme" ><img src="img/muhamad.jpg" alt="ali"></div>
+						</div>
+					</div>
+				</div>
+					<div class="absolute">All rights reserved by brandex | 2019</div>
+			</div>
+
+    </div>
 		<div class="block__right">
 		  <div class="container">
 				<div class="menu__block">
@@ -210,8 +237,48 @@
 		</div>
 		</div>
 	</section>
-
 	<footer>
+	<div class="contact" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact_block">
+				<div class="col col-lefta col-lg-3">
+					<div class="contact_text_block">
+						<h3>Ready to talk growth</h3>
+						<p>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit, sed</p>
+						<div class="contact_info">
+							<div class="contact_mini"><img src="img/envelope.svg" alt="message"><p>testclick@gmail.com</p></div>
+							<div class="contact_mini"><img src="img/call-answer.svg" alt="message"><p>+998902762651</p></div>
+							<div class="sociala">
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+								<i class="fa fa-instagram" aria-hidden="true"></i>
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col col-righta col-lg-4">
+					<div class="contact_form_block">
+						<form action="{{ url('/send-message') }}" class="formcontact" method="post">
+							<label class="call">Get in touch</label>
+							<div class="dws-input">
+							<input class="inpute" type="text" name="name" id="name"  placeholder="Name"></div>
+							<div class="dws-input">
+							<input class="inpute" type="text" name="email" id="phone"  placeholder="Email"></div>
+							<div class="dws-input">
+							  <textarea name="" id="" cols="30" rows="7" placeholder="Message"></textarea>
+							</div>
+							<!-- {{ csrf_field() }} -->
+							<button type="submit" class="btnforcontact">Send</button>
+						</form>
+					</div>
+				</div>
+			 </div>
+		  </div>
+		</div>
+	</div>
+
+
 		<div class="container">
 			<div class="footer__menu">
 				<p class="logofooter">Isfandiyor<span>.</span></p>

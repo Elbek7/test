@@ -1,8 +1,11 @@
 $(document).ready(function(){
 
-            $('.sidebarBtn').click(function(){
-                $('.sidebar').toggleClass('active');
-                $('.sidebarBtn').toggleClass('toggle');
+  $('textarea')
+    .focus(function() { $(this).css("background", "none") });
+
+            $('.mobile-menu__btn').click(function(){
+                $('.animatemenu').toggleClass('actives');
+                $('.mobile-menu__btn').toggleClass('toggle');
             })
 
     	$(window).on('load',function(){
@@ -61,7 +64,7 @@ jQuery.fn.extend({
       for ( l = array_of_$elements.length, i = 0; i < l; ++i ) {
         if ($window.scrollTop() + window_height > array_of_$elements[i].offset().top) {
           array_of_$elements[i].addClass(class_to_add);
-          processed.push(i); 
+          processed.push(i);
         }
       }
       if (processed.length) {
@@ -126,4 +129,3 @@ $('.effect').onAppearanceAddClass('animated bounceInUp');
 	  ]
 	});
 })
-
