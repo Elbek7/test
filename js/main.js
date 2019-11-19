@@ -20,6 +20,7 @@ $(document).ready(function(){
 	    	prevArrow: '<button id="prev" type="button" class="btn btn-juliet clients_btnsl"><img class="left" src="img/right-arrow.svg"></button>',
 		    nextArrow: '<button id="next" type="button" class="btn btn-juliet clients_btnsr"><img src="img/right-arrow.svg"></button>',
 		    infinite: false,
+         lazyLoad: 'ondemand',
 		    slidesToScroll: 1
     	});
 
@@ -31,7 +32,7 @@ $(document).ready(function(){
 
     	  infinite: false,
     	  slidesToShow: 3,
-
+         lazyLoad: 'ondemand',
     	  slidesToScroll: 3,
         responsive: [
           {
