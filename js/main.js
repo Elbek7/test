@@ -1,8 +1,11 @@
 $(document).ready(function(){
 
-            $('.sidebarBtn').click(function(){
-                $('.sidebar').toggleClass('active');
-                $('.sidebarBtn').toggleClass('toggle');
+  $('textarea')
+    .focus(function() { $(this).css("background", "none") });
+
+            $('.mobile-menu__btn').click(function(){
+                $('.animatemenu').toggleClass('actives');
+                $('.mobile-menu__btn').toggleClass('toggle');
             })
 
     	$(window).on('load',function(){
@@ -17,6 +20,7 @@ $(document).ready(function(){
 	    	prevArrow: '<button id="prev" type="button" class="btn btn-juliet clients_btnsl"><img class="left" src="img/right-arrow.svg"></button>',
 		    nextArrow: '<button id="next" type="button" class="btn btn-juliet clients_btnsr"><img src="img/right-arrow.svg"></button>',
 		    infinite: false,
+         lazyLoad: 'ondemand',
 		    slidesToScroll: 1
     	});
 
@@ -28,8 +32,40 @@ $(document).ready(function(){
 
     	  infinite: false,
     	  slidesToShow: 3,
-
-    	  slidesToScroll: 3
+         lazyLoad: 'ondemand',
+    	  slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 790,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
     	});
 
 jQuery.fn.extend({
@@ -61,7 +97,7 @@ jQuery.fn.extend({
       for ( l = array_of_$elements.length, i = 0; i < l; ++i ) {
         if ($window.scrollTop() + window_height > array_of_$elements[i].offset().top) {
           array_of_$elements[i].addClass(class_to_add);
-          processed.push(i); 
+          processed.push(i);
         }
       }
       if (processed.length) {
@@ -95,6 +131,7 @@ $('.effect').onAppearanceAddClass('animated bounceInUp');
 	    nextArrow: '<button id="next" type="button" class="btn btn-juliet btnarrow"><img src="img/right-arrow.svg"></button>',
 
 	  dots: true,
+     lazyLoad: 'ondemand',
 	  infinite: false,
 	  speed: 300,
 	  slidesToShow:3,
@@ -103,27 +140,33 @@ $('.effect').onAppearanceAddClass('animated bounceInUp');
 	    {
 	      breakpoint: 1200,
 	      settings: {
-	        slidesToShow: 3,
+	        slidesToShow: 2,
 	        slidesToScroll: 1,
 	        infinite: true,
 	        dots: false
 	      }
 	    },
+      {
+	      breakpoint: 790,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    },
 	    {
 	      breakpoint: 600,
 	      settings: {
-	        slidesToShow: 2,
+	        slidesToShow: 1,
 	        slidesToScroll: 1
 	      }
 	    },
 	    {
 	      breakpoint: 480,
 	      settings: {
-	        slidesToShow: 2,
+	        slidesToShow: 1,
 	        slidesToScroll: 1
 	      }
 	    }
 	  ]
 	});
 })
-
