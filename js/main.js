@@ -130,6 +130,7 @@ $('.effect').onAppearanceAddClass('animated bounceInUp');
 	    nextArrow: '<button id="next" type="button" class="btn btn-juliet btnarrow"><img src="img/right-arrow.svg"></button>',
 
 	  dots: true,
+     lazyLoad: 'ondemand',
 	  infinite: false,
 	  speed: 300,
 	  slidesToShow:3,
